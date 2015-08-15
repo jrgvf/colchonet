@@ -11,6 +11,10 @@ pt:
       edit: Editar Perfil
       location: "Localização: %{location}"
       bio: "Bio: %{bio}"
+  user_sessions:
+    new:
+      title: 'Login'
+      sign_up: 'Cadastre-se'
 
   signup:
     confirm_email:
@@ -50,3 +54,17 @@ pt:
         location: Localização
         password: Senha
         password_confirmation: Confirme sua Senha
+
+  activemodel:
+    attributes:
+      user_session:
+        email: Email
+        password: Senha
+    errors:
+      messages:
+        invalid_login: 'Usuário ou senha inválidos'
+
+  helpers:
+    submit:
+      user_session:
+        create: 'Entrar'

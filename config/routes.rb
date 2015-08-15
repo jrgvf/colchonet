@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: /en|pt/ do
     resources :rooms
     resources :users
+    resources :user_sessions, only: [:create, :new, :destroy]
   end
 
   resource :confirmation, only: [:show]

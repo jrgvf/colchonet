@@ -1,6 +1,6 @@
 pt:
   confirmations:
-    success: Email confirmado com sucesso, obrigado!
+    success: "Email confirmado com sucesso, obrigado!"
   users:
     new:
       title: Cadastro
@@ -11,6 +11,14 @@ pt:
       edit: Editar Perfil
       location: "Localização: %{location}"
       bio: "Bio: %{bio}"
+  rooms:
+    index:
+      title: "Quartos disponíveis"
+    room:
+      owner_html: "&mdash; %{owner} (%{when})"
+      edit: "Editar"
+      destroy: "Remover"
+      location: "Localização"
   user_sessions:
     new:
       title: 'Login'
@@ -32,10 +40,26 @@ pt:
 
   layout:
     rooms: Quartos
+    new_room: Cadastre seu quarto!
     signup: Cadastro
+    signin: Login
+    my_profile: Meu Perfil
+    signout: Logout
+
+  flash:
+    notice:
+      already_logged_in: Você já está logado.
+      signed_in: Login efetuado com sucesso!
+      signed_out: Logout efetuado com sucesso. Até logo!
+    alert:
+      needs_login: Você precisa estar logado para continuar
+
+  dialogs:
+    destroy: "Você tem certeza que quer remover?"
+    signout: Você tem certeza que deseja sair?
 
   general:
-    form_error: Há erros no formulário, por favor verifique.
+    form_error: "Há erros no formulário, por favor verifique."
     app: colcho.net
 
   activerecord:

@@ -1,4 +1,8 @@
 pt:
+  will_paginate:
+    previous_label: "&lsaquo; Anterior"
+    next_label: "Próxima &rsaquo;"
+    page_gap: "..."
   confirmations:
     success: "Email confirmado com sucesso, obrigado!"
     already_confirmed: "Usuário já confirmado!"
@@ -64,6 +68,8 @@ pt:
       already_logged_in: Você já está logado.
       signed_in: Login efetuado com sucesso!
       signed_out: Logout efetuado com sucesso. Até logo!
+      room_created: Quarto registrado com sucesso!
+      room_updated: Quarto atualizado com sucesso!
     alert:
       needs_login: Você precisa estar logado para continuar
 
@@ -85,6 +91,7 @@ pt:
         description: Descrição
         location: Localização
         title: Título
+        picture: Foto
       user:
         bio: Biogragia
         email: Email

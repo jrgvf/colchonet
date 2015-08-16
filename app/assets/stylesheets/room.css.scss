@@ -90,3 +90,15 @@ mark {
 .review form > input {
   display:none;
 }
+
+.room-description {
+  p, img {
+    float: left;
+    margin-right: 10px;
+  }
+}
+
+.room-description + ul {
+  padding-top: 10px;
+  clear: both;
+}

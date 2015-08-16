@@ -5,8 +5,10 @@ gem 'mailcatcher'
 gem "font-awesome-rails"
 gem 'jquery-turbolinks'
 gem 'friendly_id', '5.0.3'
-gem 'kaminari'
-
+# gem 'kaminari' #Alternativa a will_paginate
+gem 'will_paginate', '~> 3.0.5'
+gem 'carrierwave', '0.10.0'
+gem 'rmagick', :require => 'RMagick'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'

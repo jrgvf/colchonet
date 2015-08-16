@@ -166,3 +166,65 @@ form {
 	@extend .padded_flash;
 	background-color: #F2DEDE;
 }
+
+.pagination {
+	margin: 20px 0;
+  	cursor: default;
+
+  	a {
+		padding: 0.2em 0.5em;
+		margin-right: 1px;
+		display: inline-block;
+		background-color: #9ECE71;
+		border: 1px solid #686;
+		color: #105cb6;
+		@include shadow(#686, 0, 3px, 6px);
+	}
+	span {
+		padding: 0.2em 0.5em;
+		margin-right: 1px;
+		display: inline-block;
+		background-color: #9ECE71;
+		border: 1px solid #686;
+		@include shadow(#686, 0, 3px, 6px);
+	}
+	em {
+		padding: 0.2em 0.5em;
+		margin-right: 1px;
+		display: inline-block;
+		background-color: #9ECE71;
+		border: 1px solid #686;
+		@include shadow(#686, 0, 3px, 6px);
+	}
+
+	.disabled {
+		color: #999999;
+		border: 1px solid #dddddd;
+	}
+	.current {
+		font-style: normal;
+		font-weight: bold;
+		background: #546f3c;
+		color: white;
+		border: 1px solid #686;
+	}
+
+	&:after {
+	    content: ".";
+	    display: block;
+	    height: 0;
+	    clear: both;
+	    visibility: hidden;
+	  * html &{
+	    	height: 1%;
+	    }
+	  *:first-child+html &{
+	    	overflow: hidden;
+	    }
+	}
+}
+
+
+.center {
+	text-align: center;
+}

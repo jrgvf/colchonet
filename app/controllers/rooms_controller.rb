@@ -1,4 +1,6 @@
 class RoomsController < ApplicationController
+  PER_PAGE = 5
+
   before_action :require_authentication, only: [:new, :edit, :create, :update, :destroy]
   before_action :set_room, only: [:show]
   before_action :set_users_room, only: [:edit, :update, :destroy]
@@ -7,11 +9,8 @@ class RoomsController < ApplicationController
     @search_query = params[:q]
     # O método #map, de coleções, retornará um novo Array contendo o resultado do bloco.
     # Dessa forma, para cada quarto, retornaremos o presenter equivalente.
-    rooms = Room.search(@search_query).most_recent
-    @rooms = rooms.map do |room|
-      # Não exibiremos o formulário na listagem
-      RoomPresenter.new(room, self, false)
-    end
+    rooms = Room.search(@search_query).most_recent.paginate(page: params[:page], per_page: PER_PAGE)
+    @rooms = RoomCollectionPresenter.new(rooms, self)
   end
 
   def show
@@ -63,6 +62,6 @@ class RoomsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def room_params
-      params.require(:room).permit(:title, :location, :description)
+      params.require(:room).permit(:title, :location, :description, :picture)
     end
 end

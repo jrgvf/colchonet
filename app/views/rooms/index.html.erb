@@ -9,6 +9,9 @@
 
 <% if @rooms.present? %>
 	<%= render @rooms %>
+	<div class="center">
+		<%= will_paginate @rooms %>
+	</div>
 <% elsif @search_query.present? %>
 	<br/><p><%= t('.search_no_results') %></p>
 <% else %>

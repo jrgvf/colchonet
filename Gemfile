@@ -7,7 +7,7 @@ gem 'friendly_id', '5.0.3'
 # gem 'kaminari' #Alternativa a will_paginate
 gem 'will_paginate', '~> 3.0.5'
 gem 'carrierwave', '0.10.0'
-gem 'rmagick', :require => 'RMagick'
+gem 'rmagick', :require => 'rmagick'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'

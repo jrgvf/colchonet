@@ -12,4 +12,8 @@ class RoomCollectionPresenter
 		end
 	end
 
+	def rooms
+		@rooms
+	end
+
 end

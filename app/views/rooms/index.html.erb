@@ -7,7 +7,7 @@
 	<% end %>
 </h1>
 
-<% if @rooms.present? %>
+<% if @rooms.rooms.present? %>
 	<%= render @rooms %>
 	<div class="center">
 		<%= will_paginate @rooms %>

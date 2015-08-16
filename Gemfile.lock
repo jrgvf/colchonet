@@ -58,6 +58,8 @@ GEM
     execjs (2.6.0)
     font-awesome-rails (4.4.0.0)
       railties (>= 3.2, < 5.0)
+    friendly_id (5.0.3)
+      activerecord (>= 4.0.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
@@ -72,6 +74,9 @@ GEM
       railties (>= 3.1.0)
       turbolinks
     json (1.8.3)
+    kaminari (0.16.3)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     libv8 (3.16.14.11)
     loofah (2.0.2)
       nokogiri (>= 1.5.9)
@@ -179,9 +184,11 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   font-awesome-rails
+  friendly_id (= 5.0.3)
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks
+  kaminari
   mailcatcher
   rails (= 4.2.3)
   sass-rails (~> 5.0)

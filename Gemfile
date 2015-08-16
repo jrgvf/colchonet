@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 gem 'mailcatcher'
 gem "font-awesome-rails"
 gem 'jquery-turbolinks'
+gem 'friendly_id', '5.0.3'
+gem 'kaminari'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

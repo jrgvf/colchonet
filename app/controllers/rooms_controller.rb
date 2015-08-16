@@ -4,9 +4,11 @@ class RoomsController < ApplicationController
   before_action :set_users_room, only: [:edit, :update, :destroy]
 
   def index
+    @search_query = params[:q]
     # O método #map, de coleções, retornará um novo Array contendo o resultado do bloco.
     # Dessa forma, para cada quarto, retornaremos o presenter equivalente.
-    @rooms = Room.most_recent.map do |room|
+    rooms = Room.search(@search_query).most_recent
+    @rooms = rooms.map do |room|
       # Não exibiremos o formulário na listagem
       RoomPresenter.new(room, self, false)
     end
@@ -51,12 +53,12 @@ class RoomsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_room
-      room_model = Room.find(params[:id])
+      room_model = Room.friendly.find_by(id: params[:id])
       @room = RoomPresenter.new(room_model, self)
     end
 
     def set_users_room
-      @room = current_user.rooms.find(params[:id])
+      @room = current_user.rooms.friendly.find_by(id: params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

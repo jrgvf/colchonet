@@ -24,6 +24,29 @@
   position: relative;
 }
 
+#content .search {
+  float: right;
+  margin: 0;
+  position: relative;
+  &:after {
+    padding: 5px;
+    font-size: 14px;
+    font-family: 'FontAwesome';
+    position: absolute;
+    content: "\f002";
+    color: #bbb;
+    top: 0;
+    right: 0;
+  }
+}
+
+mark {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: gold;
+}
+
 .review label {
   display: inline;
 }

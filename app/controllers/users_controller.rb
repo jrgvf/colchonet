@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-	before_action :require_no_authentication, only: [:new, :create]
+	before_action :require_no_authentication, only: [:new, :create, :edit, :update]
 	before_action :can_change, only: [:edit, :update]
 
 	def show

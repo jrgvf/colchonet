@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 # Custom gems
 gem 'mailcatcher'
+gem "font-awesome-rails"
+gem 'jquery-turbolinks'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

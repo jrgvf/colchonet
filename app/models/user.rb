@@ -4,7 +4,8 @@ class User < ActiveRecord::Base
 
 	EMAIL_REGEXP = /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
 	
-	has_many :rooms
+	has_many :reviews, dependent: :destroy
+	has_many :rooms, dependent: :destroy
 
 	validates_presence_of :email, :full_name, :location
 	validates_length_of :bio, minimum: 30, allow_blank: false

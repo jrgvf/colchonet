@@ -1,6 +1,8 @@
 pt:
   confirmations:
     success: "Email confirmado com sucesso, obrigado!"
+    already_confirmed: "Usuário já confirmado!"
+    invalid: "Link de confirmação inválido."
   users:
     new:
       title: Cadastro
@@ -19,6 +21,12 @@ pt:
       edit: "Editar"
       destroy: "Remover"
       location: "Localização"
+    review:
+      stats:
+        one: ' (1 avaliação)'
+        other: ' (%{count} avaliações)'
+    review_form:
+      login_to_review: "Faça o login para avaliar quartos"
   user_sessions:
     new:
       title: 'Login'
@@ -66,6 +74,7 @@ pt:
     models:
       room: Quarto
       user: Usuário
+      review: Avaliação
     attributes:
       room:
         description: Descrição

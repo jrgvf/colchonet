@@ -20,8 +20,13 @@ class Room < ActiveRecord::Base
 
 	def self.search(query)
 		if query.present?
-			where(['location LIKE :query OR title LIKE :query OR description LIKE :query',
+			if ENV['RAILS_ENV'] == 'production'
+				where(['location ILIKE :query OR title ILIKE :query OR description ILIKE :query',
 				query: "%#{query}%"])
+			else
+				where(['location LIKE :query OR title LIKE :query OR description LIKE :query',
+				query: "%#{query}%"])
+			end
 		else
 			all
 		end
